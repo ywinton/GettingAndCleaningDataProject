@@ -20,19 +20,19 @@
 - Create and output data set with the average of each variable for each activity and each subject.
 
 ##Description of datasets
-features: reads features.txt
-header: vector of feature names
-header2: subset of header only contains mean and std columns
-activity_labels: reads activity_labels.txt activity labels
-X_train: reads X_train.txt training set
-X_train1: subset of X_train only retains variable columns with mean and std
-y_train: reads y_train training labels
-subject_train: reads subject_train.txt subjecct of training set
-mtraining: Final training set Combines activity_labels, subject_train, y_train, X_train1
-X_test: reads X_test.txt test set
-X_test1: subset of X_test only retains variable columns with mean and std
-y_test: reads y_test test labels
-subject_test: reads subject_test.txt subject of test set
-mtest: Final test set Combines activity_labels, subject_test, y_test, X_test
-fullset1: Combines final training set and final test set
-sortavg: Final data set for this project, this is a sorted data set that takes average of each variable for each activity and each subject from fullset1
+- features: reads features.txt
+- header: vector of feature names
+- header2: subset of header only contains mean and std columns
+- activity_labels: reads activity_labels.txt activity labels
+- X_train: reads X_train.txt training set
+- X_train1: subset of X_train only retains variable columns with mean and std
+- y_train: reads y_train training labels
+- subject_train: reads subject_train.txt subjecct of training set
+- mtraining: Final training set Combines activity_labels, subject_train, y_train, X_train1
+- X_test: reads X_test.txt test set
+- X_test1: subset of X_test only retains variable columns with mean and std
+- y_test: reads y_test test labels
+- subject_test: reads subject_test.txt subject of test set
+- mtest: Final test set Combines activity_labels, subject_test, y_test, X_test
+- fullset1: Combines final training set and final test set
+- sortavg: Final data set for this project, this is a sorted data set that takes average of each variable for each activity and each subject from fullset1
