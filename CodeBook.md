@@ -35,6 +35,10 @@ Variables
 
 subject - the subject 1-30 who performed the activity for each window sample.                       
 activity- walking, walking upstairs, walking downstairs, sitting, standing, laying     
+For all following variables: 
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions
+mean(): Mean value
+std(): Standard deviation
 
 Time domain signals: from the accelerometer and gyroscope (timeBodyGyro-XYZ) 3-axial raw signals, the acceleration signal was then separated into body (timeBodyAcc-XYZ) and gravity acceleration signals (timeGravityAcc-XYZ)
 timeBodyAcc-mean()-X               
@@ -57,7 +61,8 @@ timeBodyGyro-std()-X
 timeBodyGyro-std()-Y                  
 timeBodyGyro-std()-Z      
 
-Time domain signals: The body linear acceleration and angular velocity were derived in time to obtain Jerk signals (timeBodyAccJerk-XYZ from the accelerometer and timeBodyGyroJerk-XYZ from gyroscope ).
+Time domain signals: The body linear acceleration and angular velocity were derived in time to obtain Jerk signals (timeBodyAccJerk-XYZ from the accelerometer and timeBodyGyroJerk-XYZ from gyroscope )
+
 timeBodyAccJerk-mean()-X             
 timeBodyAccJerk-mean()-Y             
 timeBodyAccJerk-mean()-Z              
@@ -70,7 +75,8 @@ timeBodyGyroJerk-std()-X
 timeBodyGyroJerk-std()-Y              
 timeBodyGyroJerk-std()-Z   
 
-The magnitude of these three-dimensional signals were calculated using the Euclidean norm (timeBodyAccMag, timeGravityAccMag, timeBodyAccJerkMag, timeBodyGyroMag, timeBodyGyroJerkMag). 
+The magnitude of these three-dimensional signals were calculated using the Euclidean norm (timeBodyAccMag, timeGravityAccMag, timeBodyAccJerkMag, timeBodyGyroMag, timeBodyGyroJerkMag)
+
 timeBodyAccMagnitude-mean()           
 timeBodyAccMagnitude-std()           
 timeGravityAccMagnitude-mean()        
@@ -81,8 +87,8 @@ timeBodyGyroMagnitude-mean()
 timeBodyGyroMagnitude-std()          
 timeBodyGyroJerkMagnitude-mean()      
 timeBodyGyroJerkMagnitude-std()   
-
-
+Frequency Domain Signals:
+A Fast Fourier Transform (FFT) was applied to some of these signals producing frequencyBodyAcc-XYZ, frequencyBodyAccJerk-XYZ, frequencyBodyGyro-XYZ, frequencyBodyAccJerkMag, frequencyBodyGyroMag, frequencyBodyGyroJerkMag. 
 frequencyBodyAcc-mean()-X             
 frequencyBodyAcc-mean()-Y            
 frequencyBodyAcc-mean()-Z             
