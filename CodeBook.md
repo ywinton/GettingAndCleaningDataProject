@@ -14,9 +14,9 @@ Raw Data: run_analysis() obtain dataset from files:
 
 Datasets:
 ========
--features: reads features.txt
--header: vector of feature names
--header2: subset of header only contains mean and std columns
+- features: reads features.txt
+- header: vector of feature names
+- header2: subset of header only contains mean and std columns
 -activity_labels: reads activity_labels.txt activity labels
 -X_train: reads X_train.txt training set
 -X_train1: subset of X_train only retains variable columns with mean and std
