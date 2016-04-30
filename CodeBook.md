@@ -19,21 +19,24 @@ run_analysis() obtain dataset from files:
 - 'train/y_train.txt': Training labels.
 - 'test/X_test.txt': Test set.
 - 'test/y_test.txt': Test labels.
-
-The following files are available for the train and test data. Their descriptions are equivalent. 
-
 - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
 
-- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+Variables
+=========
 
 subject - the subject 1-30 who performed the activity for each window sample.                       
-activity- walking, walking upstairs, walking downstairs, sitting, standing, laying                             
+activity- walking, walking upstairs, walking downstairs, sitting, standing, laying     
+
+Time domain signals: from the accelerometer and gyroscope (timeBodyGyro-XYZ) 3-axial raw signals, the acceleration signal was then separated into body (timeBodyAcc-XYZ) and gravity acceleration signals (timeGravityAcc-XYZ)
 timeBodyAcc-mean()-X               
 timeBodyAcc-mean()-Y                 
 timeBodyAcc-mean()-Z                  
@@ -45,25 +48,29 @@ timeGravityAcc-mean()-Y
 timeGravityAcc-mean()-Z               
 timeGravityAcc-std()-X               
 timeGravityAcc-std()-Y              
-timeGravityAcc-std()-Z               
-timeBodyAccJerk-mean()-X             
-timeBodyAccJerk-mean()-Y             
-timeBodyAccJerk-mean()-Z              
-timeBodyAccJerk-std()-X              
-timeBodyAccJerk-std()-Y               
+timeGravityAcc-std()-Z 
 timeBodyAccJerk-std()-Z              
 timeBodyGyro-mean()-X                 
 timeBodyGyro-mean()-Y                
 timeBodyGyro-mean()-Z                 
 timeBodyGyro-std()-X                 
 timeBodyGyro-std()-Y                  
-timeBodyGyro-std()-Z                 
+timeBodyGyro-std()-Z      
+
+Time domain signals: The body linear acceleration and angular velocity were derived in time to obtain Jerk signals (timeBodyAccJerk-XYZ from the accelerometer and timeBodyGyroJerk-XYZ from gyroscope ).
+timeBodyAccJerk-mean()-X             
+timeBodyAccJerk-mean()-Y             
+timeBodyAccJerk-mean()-Z              
+timeBodyAccJerk-std()-X              
+timeBodyAccJerk-std()-Y               
 timeBodyGyroJerk-mean()-X             
 timeBodyGyroJerk-mean()-Y            
 timeBodyGyroJerk-mean()-Z             
 timeBodyGyroJerk-std()-X             
 timeBodyGyroJerk-std()-Y              
-timeBodyGyroJerk-std()-Z             
+timeBodyGyroJerk-std()-Z   
+
+The magnitude of these three-dimensional signals were calculated using the Euclidean norm (timeBodyAccMag, timeGravityAccMag, timeBodyAccJerkMag, timeBodyGyroMag, timeBodyGyroJerkMag). 
 timeBodyAccMagnitude-mean()           
 timeBodyAccMagnitude-std()           
 timeGravityAccMagnitude-mean()        
@@ -73,7 +80,9 @@ timeBodyAccJerkMagnitude-std()
 timeBodyGyroMagnitude-mean()          
 timeBodyGyroMagnitude-std()          
 timeBodyGyroJerkMagnitude-mean()      
-timeBodyGyroJerkMagnitude-std()      
+timeBodyGyroJerkMagnitude-std()   
+
+
 frequencyBodyAcc-mean()-X             
 frequencyBodyAcc-mean()-Y            
 frequencyBodyAcc-mean()-Z             
