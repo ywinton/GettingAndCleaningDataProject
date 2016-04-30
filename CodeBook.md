@@ -2,7 +2,7 @@
 ======================================
 The experiments have been carried out with a group of 30 volunteers who each performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-Raw Data: run_analysis() obtain dataset from files:
+##Raw Data: run_analysis() obtain dataset from files:
 ===============================================
 - 'features.txt': List of all features.
 - 'activity_labels.txt': Links the class labels with their activity name.
@@ -12,7 +12,7 @@ Raw Data: run_analysis() obtain dataset from files:
 - 'test/y_test.txt': Test labels.
 - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-Datasets:
+##Datasets:
 ========
 - features: reads features.txt
 - header: vector of feature names
@@ -31,7 +31,7 @@ Datasets:
 - fullset1: Combines final training set and final test set
 - sortavg: Final data set for this project, this is a sorted data set that takes average of each variable for each activity and each subject from fullset1
 
-Variables
+##Variables
 =========
 
 subject - the subject 1-30 who performed the activity for each window sample.                       
